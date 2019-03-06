@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		CDD83FDE222708DA00184A86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD83FDD222708DA00184A86 /* AppDelegate.swift */; };
-		CDD83FE0222708DA00184A86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD83FDF222708DA00184A86 /* ViewController.swift */; };
+		CDD83FE0222708DA00184A86 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD83FDF222708DA00184A86 /* OnBoardingViewController.swift */; };
 		CDD83FE3222708DA00184A86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD83FE1222708DA00184A86 /* Main.storyboard */; };
 		CDD83FE5222708DB00184A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDD83FE4222708DB00184A86 /* Assets.xcassets */; };
 		CDD83FE8222708DB00184A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD83FE6222708DB00184A86 /* LaunchScreen.storyboard */; };
+		CDD83FF2222A5B7700184A86 /* WarningTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD83FF1222A5B7700184A86 /* WarningTableViewCell.swift */; };
+		CDD83FF4222A639700184A86 /* WarningsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD83FF3222A639700184A86 /* WarningsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CDD83FDA222708DA00184A86 /* alrt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alrt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDD83FDD222708DA00184A86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CDD83FDF222708DA00184A86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CDD83FDF222708DA00184A86 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		CDD83FE2222708DA00184A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CDD83FE4222708DB00184A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDD83FE7222708DB00184A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDD83FE9222708DC00184A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDD83FF1222A5B7700184A86 /* WarningTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningTableViewCell.swift; sourceTree = "<group>"; };
+		CDD83FF3222A639700184A86 /* WarningsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				CDD83FDD222708DA00184A86 /* AppDelegate.swift */,
-				CDD83FDF222708DA00184A86 /* ViewController.swift */,
+				CDD83FDF222708DA00184A86 /* OnBoardingViewController.swift */,
 				CDD83FE1222708DA00184A86 /* Main.storyboard */,
 				CDD83FE4222708DB00184A86 /* Assets.xcassets */,
 				CDD83FE6222708DB00184A86 /* LaunchScreen.storyboard */,
 				CDD83FE9222708DC00184A86 /* Info.plist */,
+				CDD83FF3222A639700184A86 /* WarningsViewController.swift */,
+				CDD83FF1222A5B7700184A86 /* WarningTableViewCell.swift */,
 			);
 			path = alrt;
 			sourceTree = "<group>";
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDD83FE0222708DA00184A86 /* ViewController.swift in Sources */,
+				CDD83FE0222708DA00184A86 /* OnBoardingViewController.swift in Sources */,
+				CDD83FF4222A639700184A86 /* WarningsViewController.swift in Sources */,
 				CDD83FDE222708DA00184A86 /* AppDelegate.swift in Sources */,
+				CDD83FF2222A5B7700184A86 /* WarningTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
