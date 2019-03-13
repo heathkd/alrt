@@ -14,11 +14,12 @@ class WarningsViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
     }
     
-    let warnings = ["Door is open", "Stove is on", "Tap is running"];
+    let warnings = [Warning(warning: "Door is open", time: "13:20"),
+                    Warning(warning: "Stove is on", time: "14:45"),
+                    Warning(warning: "Tap is running", time: "17:14")]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return warnings.count
@@ -26,15 +27,19 @@ class WarningsViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! WarningTableViewCell
-        cell.warning.text = warnings[indexPath.row]
+
+        cell.warning.text = warnings[indexPath.row].warning
+        cell.time.text = warnings[indexPath.row].time
         
         return cell
     }
     
-    
-    
-    
-    
-    
-    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return CGFloat(65)
+//    }
+}
+
+struct Warning {
+    let warning: String
+    let time: String
 }
