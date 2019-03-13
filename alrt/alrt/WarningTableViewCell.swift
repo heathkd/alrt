@@ -12,6 +12,7 @@ class WarningTableViewCell: UITableViewCell {
 
     @IBOutlet weak var warning: UILabel!
     @IBOutlet weak var time: UILabel!
+    @IBOutlet weak var colour: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

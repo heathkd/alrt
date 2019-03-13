@@ -61,28 +61,39 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWf-4X-RQr">
-                                                    <rect key="frame" x="15" y="15" width="290" height="21"/>
+                                                    <rect key="frame" x="35" y="15" width="270" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvc-DX-gBS">
-                                                    <rect key="frame" x="263" y="44" width="42" height="20.5"/>
+                                                    <rect key="frame" x="263" y="43.5" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EYU-af-0Yt" userLabel="Colour">
+                                                    <rect key="frame" x="15" y="0.0" width="10" height="79.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="10" id="usH-39-jXm"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="tvc-DX-gBS" secondAttribute="trailing" constant="15" id="4DF-lm-2jj"/>
-                                                <constraint firstItem="fWf-4X-RQr" firstAttribute="leading" secondItem="OJo-Ft-ZwV" secondAttribute="leading" constant="15" id="6Tg-JC-CWb"/>
                                                 <constraint firstItem="tvc-DX-gBS" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fWf-4X-RQr" secondAttribute="bottom" constant="5" id="EEV-JY-QnR"/>
+                                                <constraint firstItem="EYU-af-0Yt" firstAttribute="leading" secondItem="OJo-Ft-ZwV" secondAttribute="leading" constant="15" id="Ua6-Fz-iar"/>
                                                 <constraint firstAttribute="bottom" secondItem="tvc-DX-gBS" secondAttribute="bottom" constant="15" id="VCx-22-V8H"/>
+                                                <constraint firstItem="fWf-4X-RQr" firstAttribute="leading" secondItem="EYU-af-0Yt" secondAttribute="trailing" constant="10" id="c9H-Hy-GTn"/>
+                                                <constraint firstItem="EYU-af-0Yt" firstAttribute="top" secondItem="OJo-Ft-ZwV" secondAttribute="top" id="nrY-E8-7CU"/>
                                                 <constraint firstAttribute="trailing" secondItem="fWf-4X-RQr" secondAttribute="trailing" constant="15" id="qIu-zi-DHm"/>
+                                                <constraint firstItem="EYU-af-0Yt" firstAttribute="height" secondItem="OJo-Ft-ZwV" secondAttribute="height" id="wMh-FV-BkR"/>
                                                 <constraint firstItem="fWf-4X-RQr" firstAttribute="top" secondItem="OJo-Ft-ZwV" secondAttribute="top" constant="15" id="xZc-io-5WC"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="colour" destination="EYU-af-0Yt" id="ZsY-UH-U5w"/>
                                             <outlet property="time" destination="tvc-DX-gBS" id="2JL-xV-qbf"/>
                                             <outlet property="warning" destination="fWf-4X-RQr" id="tDc-Jv-FqY"/>
                                         </connections>
