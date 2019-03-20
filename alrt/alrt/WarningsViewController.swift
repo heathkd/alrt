@@ -78,7 +78,6 @@ class WarningsViewController: UIViewController, UITableViewDelegate, UITableView
         var cell = WarningTableViewCell()
         if tableView == self.inProgressTable {
             cell = tableView.dequeueReusableCell(withIdentifier: "inProgressCell", for: indexPath) as! WarningTableViewCell
-
             cell.warning.text = inProgressWarnings[indexPath.row].sensor + " " + inProgressWarnings[indexPath.row].status
             cell.time.text = inProgressWarnings[indexPath.row].timestamp
             cell.colour.backgroundColor = colours[indexPath.row % 4]
