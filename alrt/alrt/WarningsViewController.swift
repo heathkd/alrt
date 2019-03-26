@@ -26,11 +26,12 @@ class WarningsViewController: UIViewController, UITableViewDelegate, UITableView
             
             if let post = snapshot.value as? NSDictionary {
                 
-                if let sensor = post.object(forKey: "sensor") as? NSNumber,
-                    let open = post.object(forKey: "open") as? NSNumber,
-                    let time = post.value(forKey: "time") as? NSNumber {
+                if let id = post.object(forKey: "ID") as? NSNumber,
+                    let sensor = post.object(forKey: "sensor") as? String,
+                    let status = post.value(forKey: "status") as? String,
+                    let timestamp = post.value(forKey: "timestamp") as? String {
                     
-                    let warning = Warning(sensor: sensor, open: open, time: time)
+                    let warning = Warning(id: id, sensor: sensor, status: status, timestamp: timestamp)
                     self.warnings.append(warning)
                 }
             }
@@ -50,8 +51,8 @@ class WarningsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! WarningTableViewCell
 
-        cell.warning.text = warnings[indexPath.row].sensor.stringValue
-        cell.time.text = warnings[indexPath.row].time.stringValue
+        cell.warning.text = warnings[indexPath.row].sensor + " " + warnings[indexPath.row].status
+        cell.time.text = warnings[indexPath.row].timestamp
         cell.colour.backgroundColor = colours[indexPath.row % 4]
         cell.backgroundColor = UIColor(red: 197/255, green: 197/255, blue: 197/255, alpha: 0.2)
         
@@ -65,13 +66,15 @@ class WarningsViewController: UIViewController, UITableViewDelegate, UITableView
 
 class Warning {
     
-    let sensor: NSNumber
-    let open: NSNumber
-    let time: NSNumber
+    let id: NSNumber
+    let sensor: String
+    let status: String
+    let timestamp: String
     
-    init (sensor: NSNumber, open: NSNumber, time: NSNumber) {
+    init (id: NSNumber, sensor: String, status: String, timestamp: String) {
+        self.id = id
         self.sensor = sensor
-        self.open = open
-        self.time = time
+        self.status = status
+        self.timestamp = timestamp
     }
 }
