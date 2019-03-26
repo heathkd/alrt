@@ -14,7 +14,7 @@ class WarningsViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var warningsTable: UITableView!
     
     var ref:DatabaseReference?
-    var test:[NSDictionary] = []
+    var warnings:[Warning] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,21 +25,18 @@ class WarningsViewController: UIViewController, UITableViewDelegate, UITableView
             // code to execute when child node is added
             
             if let post = snapshot.value as? NSDictionary {
-                self.test.append(post)
+                
+                if let sensor = post.object(forKey: "sensor") as? NSNumber,
+                    let open = post.object(forKey: "open") as? NSNumber,
+                    let time = post.value(forKey: "time") as? NSNumber {
+                    
+                    let warning = Warning(sensor: sensor, open: open, time: time)
+                    self.warnings.append(warning)
+                }
             }
-            
+            self.warningsTable.reloadData()
         })
-//        ref?.child("Las0UWNaoRZ_u91EQz2").child("Las0W3eHUiwoeGPehkUs").observe(.childAdded, with: { (snapshot) in
-//            // code to execute when child node is added
-//            self.test.append("")
-//        })
-}
-    
-    let warnings = [Warning(warning: "Door is open", time: "13:20"),
-                    Warning(warning: "Stove is on", time: "14:45"),
-                    Warning(warning: "Tap is running", time: "17:14"),
-                    Warning(warning: "Shower is running", time: "17:20"),
-                    Warning(warning: "Door is closed", time: "18:50")]
+    }
     
     let colours = [UIColor(red: 66/255, green: 133/255, blue: 244/255, alpha: 1),
                   UIColor(red: 219/255, green: 68/255, blue: 55/255, alpha: 1),
@@ -53,8 +50,8 @@ class WarningsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! WarningTableViewCell
 
-        cell.warning.text = warnings[indexPath.row].warning
-        cell.time.text = warnings[indexPath.row].time
+        cell.warning.text = warnings[indexPath.row].sensor.stringValue
+        cell.time.text = warnings[indexPath.row].time.stringValue
         cell.colour.backgroundColor = colours[indexPath.row % 4]
         cell.backgroundColor = UIColor(red: 197/255, green: 197/255, blue: 197/255, alpha: 0.2)
         
@@ -66,7 +63,15 @@ class WarningsViewController: UIViewController, UITableViewDelegate, UITableView
 //    }
 }
 
-struct Warning {
-    let warning: String
-    let time: String
+class Warning {
+    
+    let sensor: NSNumber
+    let open: NSNumber
+    let time: NSNumber
+    
+    init (sensor: NSNumber, open: NSNumber, time: NSNumber) {
+        self.sensor = sensor
+        self.open = open
+        self.time = time
+    }
 }
