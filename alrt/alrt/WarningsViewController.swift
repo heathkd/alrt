@@ -7,15 +7,33 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class WarningsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var warningsTable: UITableView!
     
+    var ref:DatabaseReference?
+    var test:[NSDictionary] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    }
+        ref = Database.database().reference()
+        //ref?.child("Event").child("first").setValue("test")
+        ref?.child("Event").observe(.childAdded, with: { (snapshot) in
+            // code to execute when child node is added
+            
+            if let post = snapshot.value as? NSDictionary {
+                self.test.append(post)
+            }
+            
+        })
+//        ref?.child("Las0UWNaoRZ_u91EQz2").child("Las0W3eHUiwoeGPehkUs").observe(.childAdded, with: { (snapshot) in
+//            // code to execute when child node is added
+//            self.test.append("")
+//        })
+}
     
     let warnings = [Warning(warning: "Door is open", time: "13:20"),
                     Warning(warning: "Stove is on", time: "14:45"),
