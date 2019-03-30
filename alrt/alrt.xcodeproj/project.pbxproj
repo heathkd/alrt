@@ -13,6 +13,8 @@
 		CD64B3062240248C00E2D017 /* MedicineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD64B3052240248C00E2D017 /* MedicineTableViewCell.swift */; };
 		CDCB8AF6225055DC001F9E45 /* UITextField+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB8AF5225055DC001F9E45 /* UITextField+Helpers.swift */; };
 		CDD5CCB3223DCA820059174B /* UITextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5CCB2223DCA820059174B /* UITextViewPlaceholder.swift */; };
+		CDCB8AF022501F17001F9E45 /* SensorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB8AEF22501F17001F9E45 /* SensorTableViewCell.swift */; };
+		CDCB8AF222501FA1001F9E45 /* SensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB8AF122501FA1001F9E45 /* SensorViewController.swift */; };
 		CDD83FDE222708DA00184A86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD83FDD222708DA00184A86 /* AppDelegate.swift */; };
 		CDD83FE0222708DA00184A86 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD83FDF222708DA00184A86 /* OnBoardingViewController.swift */; };
 		CDD83FE3222708DA00184A86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD83FE1222708DA00184A86 /* Main.storyboard */; };
@@ -30,6 +32,8 @@
 		CD64B3052240248C00E2D017 /* MedicineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineTableViewCell.swift; sourceTree = "<group>"; };
 		CDCB8AF5225055DC001F9E45 /* UITextField+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Helpers.swift"; sourceTree = "<group>"; };
 		CDD5CCB2223DCA820059174B /* UITextViewPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewPlaceholder.swift; sourceTree = "<group>"; };
+		CDCB8AEF22501F17001F9E45 /* SensorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorTableViewCell.swift; sourceTree = "<group>"; };
+		CDCB8AF122501FA1001F9E45 /* SensorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewController.swift; sourceTree = "<group>"; };
 		CDD83FDA222708DA00184A86 /* alrt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alrt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDD83FDD222708DA00184A86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDD83FDF222708DA00184A86 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 				CDD83FE9222708DC00184A86 /* Info.plist */,
 				CDD83FF3222A639700184A86 /* WarningsViewController.swift */,
 				CD64B3052240248C00E2D017 /* MedicineTableViewCell.swift */,
+				CDCB8AEF22501F17001F9E45 /* SensorTableViewCell.swift */,
+				CDCB8AF122501FA1001F9E45 /* SensorViewController.swift */,
 				CDD83FF1222A5B7700184A86 /* WarningTableViewCell.swift */,
 			);
 			path = alrt;
@@ -241,6 +247,8 @@
 				CDD83FE0222708DA00184A86 /* OnBoardingViewController.swift in Sources */,
 				CD64B3062240248C00E2D017 /* MedicineTableViewCell.swift in Sources */,
 				CDD5CCB3223DCA820059174B /* UITextViewPlaceholder.swift in Sources */,
+				CDCB8AF022501F17001F9E45 /* SensorTableViewCell.swift in Sources */,
+				CDCB8AF222501FA1001F9E45 /* SensorViewController.swift in Sources */,
 				CDD83FF4222A639700184A86 /* WarningsViewController.swift in Sources */,
 				CDD83FDE222708DA00184A86 /* AppDelegate.swift in Sources */,
 				CDD83FF2222A5B7700184A86 /* WarningTableViewCell.swift in Sources */,
