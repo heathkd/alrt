@@ -11,6 +11,7 @@
 		CD0ADFCF2246A734002B3CDB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD0ADFCE2246A734002B3CDB /* GoogleService-Info.plist */; };
 		CD64B30422401C4700E2D017 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD64B30322401C4700E2D017 /* ProfileViewController.swift */; };
 		CD64B3062240248C00E2D017 /* MedicineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD64B3052240248C00E2D017 /* MedicineTableViewCell.swift */; };
+		CDCB8AF6225055DC001F9E45 /* UITextField+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB8AF5225055DC001F9E45 /* UITextField+Helpers.swift */; };
 		CDD5CCB3223DCA820059174B /* UITextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5CCB2223DCA820059174B /* UITextViewPlaceholder.swift */; };
 		CDD83FDE222708DA00184A86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD83FDD222708DA00184A86 /* AppDelegate.swift */; };
 		CDD83FE0222708DA00184A86 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD83FDF222708DA00184A86 /* OnBoardingViewController.swift */; };
@@ -27,6 +28,7 @@
 		CD0ADFCE2246A734002B3CDB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CD64B30322401C4700E2D017 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CD64B3052240248C00E2D017 /* MedicineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineTableViewCell.swift; sourceTree = "<group>"; };
+		CDCB8AF5225055DC001F9E45 /* UITextField+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Helpers.swift"; sourceTree = "<group>"; };
 		CDD5CCB2223DCA820059174B /* UITextViewPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewPlaceholder.swift; sourceTree = "<group>"; };
 		CDD83FDA222708DA00184A86 /* alrt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alrt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDD83FDD222708DA00184A86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		CDD83FDC222708DA00184A86 /* alrt */ = {
 			isa = PBXGroup;
 			children = (
+				CDCB8AF5225055DC001F9E45 /* UITextField+Helpers.swift */,
 				CDD83FDD222708DA00184A86 /* AppDelegate.swift */,
 				CDD5CCB2223DCA820059174B /* UITextViewPlaceholder.swift */,
 				CD64B30322401C4700E2D017 /* ProfileViewController.swift */,
@@ -234,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD64B30422401C4700E2D017 /* ProfileViewController.swift in Sources */,
+				CDCB8AF6225055DC001F9E45 /* UITextField+Helpers.swift in Sources */,
 				CDD83FE0222708DA00184A86 /* OnBoardingViewController.swift in Sources */,
 				CD64B3062240248C00E2D017 /* MedicineTableViewCell.swift in Sources */,
 				CDD5CCB3223DCA820059174B /* UITextViewPlaceholder.swift in Sources */,

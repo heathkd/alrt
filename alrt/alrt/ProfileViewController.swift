@@ -20,7 +20,12 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillLayoutSubviews() {
+        self.name.underline()
+        self.medicine.underline()
+        self.age.underline()
     }
     
     @IBAction func buttonPressed(_ sender: Any) {
@@ -42,7 +47,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         return cell
     }
-    
     
 
     /*
