@@ -21,11 +21,14 @@ class WarningsViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        self.inProgressTable.rowHeight = UITableView.automaticDimension
+        self.inProgressTable.estimatedRowHeight = 80
+        self.inProgressTable.separatorStyle = .none
+        self.completedTable.separatorStyle = .none
+        
         ref = Database.database().reference()
         ref?.child("Event").observe(.childAdded, with: { (snapshot) in
-            // code to execute when child node is added
-            
             if let post = snapshot.value as? NSDictionary {
                 
                 if let id = post.object(forKey: "ID") as? NSNumber,
@@ -48,14 +51,12 @@ class WarningsViewController: UIViewController, UITableViewDelegate, UITableView
         })
         ref?.child("Event").observe(.childRemoved, with: { (snapshot) in
             self.inProgressWarnings = []
-            self.inProgressWarnings.append(Warning(id: -1, sensor: "Oven ", status: "is on", timestamp: "12:11"))
-            self.inProgressWarnings.append(Warning(id: -2, sensor: "Shower ", status: "is running", timestamp: "13:14"))
+            self.inProgressWarnings.append(Warning(id: -1, sensor: "Oven", status: "is on", timestamp: "12:11"))
             self.completedWarnings = []
             self.inProgressTable.reloadData()
             self.completedTable.reloadData()
         })
-        self.inProgressWarnings.append(Warning(id: -1, sensor: "Oven ", status: "is on", timestamp: "12:11"))
-        self.inProgressWarnings.append(Warning(id: -2, sensor: "Shower ", status: "is running", timestamp: "13:14"))
+        self.inProgressWarnings.append(Warning(id: -1, sensor: "Oven", status: "is on", timestamp: "12:11"))
     }
     
     let colours = [UIColor(red: 66/255, green: 133/255, blue: 244/255, alpha: 1),
@@ -91,6 +92,7 @@ class WarningsViewController: UIViewController, UITableViewDelegate, UITableView
             cell.time.text = completedWarnings[indexPath.row].timestamp
             cell.colour.backgroundColor = colours[indexPath.row % 4]
             cell.backgroundColor = UIColor(red: 197/255, green: 197/255, blue: 197/255, alpha: 0.2)
+            cell.contentView.alpha = 0.4
         }
         return cell
     }
