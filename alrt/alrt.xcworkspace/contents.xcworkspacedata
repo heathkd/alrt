@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/hkdsouza/Desktop/alrt/alrt/alrt/UIView+Helpers.swift">
-   </FileRef>
-   <FileRef
       location = "group:alrt.xcodeproj">
    </FileRef>
    <FileRef
