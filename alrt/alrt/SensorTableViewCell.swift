@@ -12,6 +12,8 @@ class SensorTableViewCell: UITableViewCell {
 
     @IBOutlet weak var sensorImage: UIImageView!
     @IBOutlet weak var sensorName: UILabel!
+    @IBOutlet weak var shadowLayer: UIView!
+    @IBOutlet weak var sensorNameView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
