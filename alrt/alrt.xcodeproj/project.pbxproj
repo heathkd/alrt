@@ -66,6 +66,7 @@
 		CDD83FD1222708DA00184A86 = {
 			isa = PBXGroup;
 			children = (
+				CD0ADFCE2246A734002B3CDB /* GoogleService-Info.plist */,
 				CDD83FDC222708DA00184A86 /* alrt */,
 				CDD83FDB222708DA00184A86 /* Products */,
 				991AEE1BF3FF745AE6FAABFC /* Pods */,
@@ -92,7 +93,6 @@
 				CDD83FE9222708DC00184A86 /* Info.plist */,
 				CDD83FF3222A639700184A86 /* WarningsViewController.swift */,
 				CDD83FF1222A5B7700184A86 /* WarningTableViewCell.swift */,
-				CD0ADFCE2246A734002B3CDB /* GoogleService-Info.plist */,
 			);
 			path = alrt;
 			sourceTree = "<group>";
@@ -375,6 +375,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G38C92FSL5;
 				INFOPLIST_FILE = alrt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -393,6 +394,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G38C92FSL5;
 				INFOPLIST_FILE = alrt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
