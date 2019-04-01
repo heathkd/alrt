@@ -12,13 +12,14 @@ class SensorViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var sensorsTable: UITableView!
     
-    let cellSpacingHeight:CGFloat = 10
+    let cellSpacingHeight:CGFloat = 20
     
     var sensors:[Sensor] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.sensorsTable.separatorStyle = UITableViewCell.SeparatorStyle.none;
+        self.sensorsTable.separatorStyle = .none;
+        self.sensorsTable.backgroundColor = UIColor.white
         sensors.append(Sensor(image: UIImage(named: "door")!, name: "Front Door"))
         sensors.append(Sensor(image: UIImage(named: "oven")!, name: "Oven Door"))
     }
@@ -39,8 +40,24 @@ class SensorViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "sensorCell") as! SensorTableViewCell
         cell.sensorImage.image = sensors[indexPath.section].image
         cell.sensorName.text = sensors[indexPath.section].name
+        cell.sensorNameView.backgroundColor = UIColor(red: 226/255, green: 226/255, blue: 226/255, alpha: 1)
         
+        cell.layer.cornerRadius = 5
+        cell.layer.masksToBounds = true;
+    
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view1 = UIView(frame: CGRect.init(x: 0.0, y: 0.0, width: 320, height: 1))
+        let view2 = UIView(frame: CGRect.init(x: 0.0, y: -1, width: 320, height: 2))
+        
+        view1.backgroundColor = UIColor.white
+        view2.backgroundColor = UIColor.white
+        
+        view1.addSubview(view2)
+        
+        return view1
     }
     
     @IBAction func addSensor(_ sender: Any) {
